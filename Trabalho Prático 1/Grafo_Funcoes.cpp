@@ -92,7 +92,7 @@ class Principal
 
     void inseri_aresta(int origem, int destino, int peso) 
     {
-        if (matriz[origem][destino] == -1) 
+        if (matriz[origem][destino] == 0) 
         {
             matriz[origem][destino] = peso;
 
@@ -126,7 +126,7 @@ class Principal
         {
             for (int j = 0; j < quantidade_vertice; j++) 
             {
-                matriz[i][j] = -1;
+                matriz[i][j] = 0;
             }
         }
     }

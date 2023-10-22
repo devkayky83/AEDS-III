@@ -26,12 +26,12 @@ int main()
         switch (resposta) 
         {
             case 1:
-                system("cls");
+                cout << "\033[2J\033[1;1H";
                 principal->importa_arquivo();
                 break;
                 
             case 2:
-                system("cls");
+                cout << "\033[2J\033[1;1H";
                 cout << "\n O grafo é direcionado? 1-(Sim) 2-(Não): ";
                 cin >> direcionado;
 
@@ -52,13 +52,13 @@ int main()
                 break;
                 
             case 3:
-                system("cls");
+                cout << "\033[2J\033[1;1H";
                 principal->matriz_impressao();
                 system("pause");
                 break;
                 
             case 4:
-                system("cls");
+                cout << "\033[2J\033[1;1H";
                 cout << "\n Digite a origem do vértice: ";
                 cin >> origem;
                 cout << "\n Digite o destino do vértice: ";
@@ -76,30 +76,20 @@ int main()
                 break;
                 
             case 5:
-                system("cls");
+                cout << "\033[2J\033[1;1H";
 
-                if (direcionado == true)
-                {
-                    cout << "\n Digite a origem do vértice: ";
-                    cin >> origem;
-                    cout << "\n Digite o destino do vértice: ";
-                    cin >> destino;
-                    cout << "\n Digite o peso do vértice: ";
-                    cin >> peso;
-                }
-                else
-                {
-                    cout << "\n Digite a origem do vértice: ";
-                    cin >> origem;
-                    cout << "\n Digite o destino do vértice: ";
-                    cin >> destino;
-                }
+                cout << "\n Digite a origem do vértice: ";
+                cin >> origem;
+                cout << "\n Digite o destino do vértice: ";
+                cin >> destino;
+                cout << "\n Digite o peso do vértice: ";
+                cin >> peso;
 
                 principal->inseri_aresta(origem, destino, peso);
                 break;
                 
             case 6:
-                system("cls");
+                cout << "\033[2J\033[1;1H";
                 cout << "\n Digite a origem do vertice: ";
                 cin >> origem;
                 cout << "\n Digite o destino do vertice: ";
@@ -109,7 +99,7 @@ int main()
                 break;
                 
             case 7:
-                system("cls");
+                cout << "\033[2J\033[1;1H";
                 cout << "\n Digite o vértice que deseja editar: ";
                 cin >> vertice;
                 cout << "\n Digite a nova coordenada do eixo X: ";
@@ -121,7 +111,7 @@ int main()
                 break;
                 
             case 8:
-                system("cls");
+                cout << "\033[2J\033[1;1H";
                 cout << "\n Digite a origem: ";
                 cin >> origem;
                 cout << "\n O primeiro adjacente é: " << principal->consulta_primeiro_adj(origem) << endl;
@@ -129,7 +119,7 @@ int main()
                 break;
                 
             case 9:
-                system("cls");
+                cout << "\033[2J\033[1;1H";
                 cout << "\n Digite o vértice: ";
                 cin >> vertice;
                 cout << "\n Digite a origem: ";
@@ -139,7 +129,7 @@ int main()
                 break;
                 
             case 10:
-                system("cls");
+                cout << "\033[2J\033[1;1H";
                 cout << "\n Digite a origem: ";
                 cin >> origem;
 
@@ -149,14 +139,14 @@ int main()
                 break;
                 
             case 11:
-                system("cls");
+                cout << "\033[2J\033[1;1H";
                 principal->exporta_arquivo();
                 break;
 
             case 0:
                 cout << "\n Saindo...";
                 Sleep(2000);
-                system("cls");
+                cout << "\033[2J\033[1;1H";
                 return 0;
             break;
                 
